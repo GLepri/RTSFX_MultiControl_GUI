@@ -1,0 +1,476 @@
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <!--  Import jquery-->
+    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+    <!--  Import custom JS file-->
+    <script src="js/index.js" type="text/javascript"></script>
+    <!--  Import utilties -->
+    <script src="js/utilities.js" type="text/javascript"></script>
+
+    <!--  Import NexusUI JS file-->
+    <!-- <script src="js/nexusUI.js"></script> -->
+    <!--Import Utility file -->
+
+    <script type="text/javascript" scr="js/utilities.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <!-- Stylesheets Import -->
+    <link rel="stylesheet" type="text/css" href="css/button.css">
+    <link rel="stylesheet" type="text/css" href="css/checkbox.css">
+    <link rel="stylesheet" type="text/css" href="css/range.css">
+    <link rel="stylesheet" type="text/css" href="css/sidenav.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="css/select.css">
+
+    <title>GUI Multi Control Example</title>
+  </head>
+
+  <body>
+    <div class="container" style="background:#333;">
+      <header style="padding-bottom: 20px; border-radius: 100px;" class="col-md-10 col-md-offset-1">
+        <br>
+        <h1 class="header-text" style="text-align:center;">Real Time Sound Effect Synthesis</h1>
+        <br>
+        <h5 class="header-text-t2" style="text-align:center;">Developed in Chrome and may not work in other browsers</h5>
+      </header>
+    </div>
+    <div class="container" style="background:#dddddd; padding-bottom: 50px; padding-top: 20px;">
+      <h2 style="text-align:center;">GUI Multi Control Example</h2>
+        <div id="loading" align="center">LOADING ...</div>
+        <div id="startButtonDiv" align="center">
+          <button class="btn" id="startButton" align="center">Start</button>
+        </div>
+        <br>
+        <ctrl>
+          <div class="form" style="padding-bottom: 50px; padding-top: 20px;">
+            <div class="row">
+              <br>
+              <div class="col-md-6 col-md-offset-3">
+                <div>
+                  <label class='controlLabel' for="slider1Input">Slider 1</label>
+                  <input type="text" id="NumberBoxVal1" value="0"> Hz</input>
+                  <input type="range" class="controlSlider" id="slider1Input" min="-1" value="-1" max="1" step="0.001">
+                </div>
+
+                <br>
+                <br>
+
+                <div>
+                  <label class='controlLabel' for="slider2Input">Slider 2</label>
+                  <input type="text" id="NumberBoxVal2" value="0"> Hz</input>
+                  <input type="range" class="controlSlider" id="slider2Input" min="0" value="0" max="5" step="0.001">
+                </div>
+
+                <br>
+                <br>
+
+                <div>
+                  <label class='controlLabel' for="slider3Input">Slider 3</label>
+                  <input type="text" id="NumberBoxVal3" value="0"> Hz</input>
+                  <input type="range" class="controlSlider" id="slider3Input" min="-6" value="-6" max="7" step="0.001">
+                </div>
+
+                <br>
+                <br>
+
+                <div>
+                  <label class='controlLabel' for="slider4Input">Slider 4</label>
+                  <input type="text" id="NumberBoxVal4" value="0"> Hz</input>
+                  <input type="range" class="controlSlider" id="slider4Input" min="3.5" value="3.5" max="10.5" step="0.001">
+                </div>
+
+                <br>
+                <br>
+
+                <div align="center">
+                  <h4 style="text-align:center;"> Multi Control Slider</h4>
+                </div>
+
+                <br>
+                <div class="col-md-6" align="right">
+                  <h5 style="text-align:left;">Start</h5>
+                </div>
+
+                <div class="col-md-6" align="right">
+                  <h5 style="text-align:right;">End</h5>
+                </div>
+
+                <div>
+                  <input type="range" class="controlSlider" id="sliderMultiControlInput" min="0" value="0" max="1" step="0.001">
+                </div>
+
+                <br>
+
+                <div class="row ">
+                  <hr style="margin:0.5em"></hr>
+                    <h5 style="text-align:center;"> Thresholds slider 1 </h5>
+
+                  <div class="col-md-4" align="right">
+                    <br>
+                    <div>
+                      <label class='controlLabel' for="minValue1">Start</label>
+                      &nbsp
+                      <input type="text" id="minValue1" style="width: 35%; height: 5%" value="0"></input>
+                    </div>
+                  </div>
+                  <div class="col-md-4" align="center">
+                    <br>
+                    <div>
+                      <label class='controlLabel' for="maxValue1">End</label>
+                      &nbsp
+                      <input type="text" id="maxValue1" style="width: 35%; height: 5%" value="100"></input>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="checkboxCustom">
+                        <input type="checkbox" name="onoffswitch" id="multiControlOnOff1" unchecked>
+                        <label class="switch-label" for="multiControlOnOff1"></label>
+                    </div>
+                </div>
+              </div>
+              <hr style="margin:0.5em"></hr>
+
+                <div class="row ">
+
+                  <h5 style="text-align:center;"> SThresholds slider 2 </h5>
+
+                  <div class="col-md-4" align="right">
+                    <br>
+                    <div>
+                      <label class='controlLabel' for="minValue2">Start</label>
+                      &nbsp
+                      <input type="text" id="minValue2" style="width: 35%; height: 5%" value="0"></input>
+                    </div>
+                  </div>
+                  <div class="col-md-4" align="center">
+                    <br>
+                    <div>
+                      <label class='controlLabel' for="maxValue2">End</label>
+                      &nbsp
+                      <input type="text" id="maxValue2" style="width: 35%; height: 5%" value="100"></input>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="checkboxCustom">
+                        <input type="checkbox" name="onoffswitch" id="multiControlOnOff2" unchecked>
+                        <label class="switch-label" for="multiControlOnOff2"></label>
+                    </div>
+                  </div>
+                </div>
+                <hr style="margin:0.5em"></hr>
+
+                <div class="row ">
+
+                  <h5 style="text-align:center;"> Thresholds slider 3 </h5>
+
+                  <div class="col-md-4" align="right">
+                    <br>
+                    <div>
+                      <label class='controlLabel' for="minValue3">Start</label>
+                      &nbsp
+                      <input type="text" id="minValue3" style="width: 35%; height: 5%" value="0"></input>
+                    </div>
+                  </div>
+                  <div class="col-md-4" align="center">
+                    <br>
+                    <div>
+                      <label class='controlLabel' for="maxValue3">End</label>
+                      &nbsp
+                      <input type="text" id="maxValue3" style="width: 35%; height: 5%" value="100"></input>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="checkboxCustom">
+                        <input type="checkbox" name="onoffswitch" id="multiControlOnOff3" unchecked>
+                        <label class="switch-label" for="multiControlOnOff3"></label>
+                    </div>
+                  </div>
+                </div>
+                <hr style="margin:0.5em"></hr>
+
+                <div class="row ">
+
+                  <h5 style="text-align:center;"> Thresholds slider 4 </h5>
+
+                  <div class="col-md-4" align="right">
+                    <br>
+                    <div>
+                      <label class='controlLabel' for="minValue4">Start</label>
+                      &nbsp
+                      <input type="text" id="minValue4" style="width: 35%; height: 5%" value="0"></input>
+                    </div>
+                  </div>
+                  <div class="col-md-4" align="center">
+                    <br>
+                    <div>
+                      <label class='controlLabel' for="maxValue4">End</label>
+                      &nbsp
+                      <input type="text" id="maxValue4" style="width: 35%; height: 5%" value="100"></input>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="checkboxCustom">
+                        <input type="checkbox" name="onoffswitch" id="multiControlOnOff4" unchecked>
+                        <label class="switch-label" for="multiControlOnOff4"></label>
+                    </div>
+                  </div>
+                </div>
+                <hr style="margin:0.5em"></hr>
+
+              </div>
+            </div>
+          </div>
+        </ctrl>
+    </div>
+
+    <script type="text/javascript">
+      // Hide start button
+      $('#startButton').hide();
+      // Show start button
+      $('#loading').fadeOut(200, function() { $('#startButton').fadeIn() })
+
+      $('#startButton').click(function () {
+        $(this).fadeOut(200, function () {
+            $('.form').finish().fadeIn("slow");
+        })
+      })
+
+      slider1Input.oninput = function(){
+        // console.log('Slider 1 ' + this.value);
+        updateTextInput('NumberBoxVal1', this.value);
+        // oldValue(slider1Input);
+      };
+
+
+       slider2Input.oninput = function(){
+        //  console.log('Slider 2 ' + this.value);
+         updateTextInput('NumberBoxVal2', this.value);
+        //  oldValue(slider2Input);
+       };
+
+
+       slider3Input.oninput = function(){
+        //  console.log('Slider 3 ' + this.value);
+         updateTextInput('NumberBoxVal3', this.value);
+        //  oldValue(slider3Input);
+       };
+
+
+       slider4Input.oninput = function(){
+        //  console.log('Slider 4 ' + this.value);
+         updateTextInput('NumberBoxVal4', this.value);
+        //  oldValue(slider4Input);
+       };
+
+
+      //on load, set min-max multi control ranges to min-max sliders ranges
+
+      onload = function setMinMulti1ToMinRange1() {
+      var slider1MinLoadValue = document.getElementById("slider1Input").min;
+      document.getElementById("minValue1").value = slider1MinLoadValue;
+
+      var slider2MinLoadValue = document.getElementById("slider2Input").min;
+      document.getElementById("minValue2").value = slider2MinLoadValue;
+
+      var slider3MinLoadValue = document.getElementById("slider3Input").min;
+      document.getElementById("minValue3").value = slider3MinLoadValue;
+
+      var slider4MinLoadValue = document.getElementById("slider4Input").min;
+      document.getElementById("minValue4").value = slider4MinLoadValue;
+
+      var slider1MaxLoadValue = document.getElementById("slider1Input").max;
+      document.getElementById("maxValue1").value = slider1MaxLoadValue;
+
+      var slider2MaxLoadValue = document.getElementById("slider2Input").max;
+      document.getElementById("maxValue2").value = slider2MaxLoadValue;
+
+      var slider3MaxLoadValue = document.getElementById("slider3Input").max;
+      document.getElementById("maxValue3").value = slider3MaxLoadValue;
+
+      var slider4MaxLoadValue = document.getElementById("slider4Input").max;
+      document.getElementById("maxValue4").value = slider4MaxLoadValue;
+
+      //on load, set numberbox sliders values
+
+      var slider1LoadValue = document.getElementById("slider1Input").value;
+      document.getElementById("NumberBoxVal1").value = slider1LoadValue;
+
+      var slider2LoadValue = document.getElementById("slider2Input").value;
+      document.getElementById("NumberBoxVal2").value = slider2LoadValue;
+
+      var slider3LoadValue = document.getElementById("slider3Input").value;
+      document.getElementById("NumberBoxVal3").value = slider3LoadValue;
+
+      var slider4LoadValue = document.getElementById("slider4Input").value;
+      document.getElementById("NumberBoxVal4").value = slider4LoadValue;
+
+      };
+
+      // constrain min-max ranges
+
+      var oriMinValue1 = slider1Input.min;
+      var oriMaxValue1 = slider1Input.max;
+      var oriMinValue2 = slider2Input.min;
+      var oriMaxValue2 = slider2Input.max;
+      var oriMinValue3 = slider3Input.min;
+      var oriMaxValue3 = slider3Input.max;
+      var oriMinValue4 = slider4Input.min;
+      var oriMaxValue4 = slider4Input.max;
+
+      minValue1.onchange = function () {
+
+
+        if (parseFloat(minValue1.value) < oriMinValue1)  {
+          minValue1.value = oriMinValue1;
+        } else if (parseFloat(minValue1.value) > oriMaxValue1) {
+          minValue1.value = oriMaxValue1;
+        } else {
+          minValue1.value = minValue1.value;
+        }
+      };
+
+      minValue2.onchange = function () {
+
+
+        if (parseFloat(minValue2.value) < oriMinValue2)  {
+          minValue2.value = oriMinValue2;
+        } else if (parseFloat(minValue2.value) > oriMaxValue2) {
+          minValue2.value = oriMaxValue2;
+        } else {
+          minValue2.value = minValue2.value;
+        }
+      };
+
+      minValue3.onchange = function () {
+
+
+        if (parseFloat(minValue3.value) < oriMinValue3)  {
+          minValue3.value = oriMinValue3;
+        } else if (parseFloat(minValue3.value) > oriMaxValue3) {
+          minValue3.value = oriMaxValue3;
+        } else {
+          minValue3.value = minValue3.value;
+        }
+      };
+
+      minValue4.onchange = function () {
+
+
+        if (parseFloat(minValue4.value) < oriMinValue4)  {
+          minValue4.value = oriMinValue4;
+        } else if (parseFloat(minValue4.value) > oriMaxValue4) {
+          minValue4.value = oriMaxValue4;
+        } else {
+          minValue4.value = minValue4.value;
+        }
+      };
+
+      maxValue1.onchange = function () {
+        var oriMinValue1 = slider1Input.min;
+        var oriMaxValue1 = slider1Input.max;
+
+        if (parseFloat(maxValue1.value) < oriMinValue1)  {
+          maxValue1.value = oriMinValue1;
+        } else if (parseFloat(maxValue1.value) > oriMaxValue1) {
+          maxValue1.value = oriMaxValue1;
+        } else {
+          maxValue1.value = maxValue1.value;
+        }
+      };
+
+      maxValue2.onchange = function () {
+
+        if (parseFloat(maxValue2.value) < oriMinValue2)  {
+          maxValue2.value = oriMinValue2;
+        } else if (parseFloat(maxValue2.value) > oriMaxValue2) {
+          maxValue2.value = oriMaxValue2;
+        } else {
+          maxValue2.value = maxValue2.value;
+        }
+      };
+
+      maxValue3.onchange = function () {
+
+        if (parseFloat(maxValue3.value) < oriMaxValue3)  {
+          maxValue3.value = oriMaxValue3;
+        } else if (parseFloat(maxValue3.value) > oriMaxValue3) {
+          maxValue3.value = oriMaxValue3;
+        } else {
+          maxValue3.value = maxValue3.value;
+        }
+      };
+
+      maxValue4.onchange = function () {
+
+        if (parseFloat(maxValue4.value) < oriMinValue4)  {
+          maxValue4.value = oriMinValue4;
+        } else if (parseFloat(maxValue4.value) > oriMaxValue4) {
+          maxValue4.value = oriMaxValue4;
+        } else {
+          maxValue4.value = maxValue4.value;
+        }
+      };
+
+      // generate boolean values for each switch
+
+      var multiControlTog1 = 0;
+      var multiControlTog2 = 0;
+      var multiControlTog3 = 0;
+      var multiControlTog4 = 0;
+
+      multiControlOnOff1.onclick = function () {
+        multiControlTog1 = Math.abs(multiControlTog1 - 1);
+        // console.log(multiControlTog1);
+      };
+
+      multiControlOnOff2.onclick = function () {
+        multiControlTog2 = Math.abs(multiControlTog2 - 1);
+        // console.log(multiControlTog2);
+      };
+
+      multiControlOnOff3.onclick = function () {
+        multiControlTog3 = Math.abs(multiControlTog3 - 1);
+        // console.log(multiControlTog3);
+      };
+
+      multiControlOnOff4.onclick = function () {
+        multiControlTog4 = Math.abs(multiControlTog4 - 1);
+        // console.log(multiControlTog4);
+      };
+
+      // rescale the multislider value to the various min-max ranges of each model's parameters
+
+      sliderMultiControlInput.oninput = function(){
+      if (multiControlTog1 == 1) {
+         slider1Input.value = parseFloat(this.value) * (parseFloat(maxValue1.value) - parseFloat(minValue1.value)) + parseFloat(minValue1.value);
+         updateTextInput('NumberBoxVal1',  slider1Input.value);
+       }
+      if (multiControlTog2 == 1) {
+        slider2Input.value = parseFloat(this.value) * (parseFloat(maxValue2.value) - parseFloat(minValue2.value)  ) + parseFloat(minValue2.value);
+        updateTextInput('NumberBoxVal2',  slider2Input.value);
+
+      }
+      if (multiControlTog3 == 1) {
+        slider3Input.value = parseFloat(this.value) * (parseFloat(maxValue3.value) - parseFloat(minValue3.value)) + parseFloat(minValue3.value);
+        updateTextInput('NumberBoxVal3',  slider3Input.value);
+
+      }
+      if (multiControlTog4 == 1) {
+        slider4Input.value = parseFloat(this.value) * (parseFloat(maxValue4.value) - parseFloat(minValue4.value)) + parseFloat(minValue4.value);
+        updateTextInput('NumberBoxVal4',  slider4Input.value);
+
+      }
+      // console.log("slider4Input.value" + slider4Input.value);
+      // console.log("maxValue4.value" + maxValue4.value);
+      // console.log("minValue4.value" + minValue4.value);
+      // console.log("this.value" + this.value);
+      };
+
+    </script>
+  </body>
+</html>
